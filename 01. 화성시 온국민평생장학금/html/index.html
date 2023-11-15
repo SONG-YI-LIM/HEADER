@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no, address=no, email=no">
+<!-- E : mobile -->
+<title>aaaa</title>
+<link rel="stylesheet" href="../assets/css/style.css" />
+<script src="../assets/js/jquery-2.2.4.js"></script>
+<script src="../assets/js/common.js"></script>
+<!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+ -->
+<!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+<body>
+<!-- skipNav -->
+<dl id="skipNav">
+	<dt>바로가기 메뉴</dt>
+	<dd><a href="#container">본문 바로가기</a></dd>
+	<dd><a href="#gnb">주메뉴 바로가기</a></dd>
+	<dd><a href="#footer">풋터 바로가기</a></dd>
+</dl>
+<!-- //skipNav -->
+<!-- wrap -->
+<div id="wrap">
+	<!-- header -->
+	<div id="header">
+		<!-- inner -->
+		<div class="inner">
+			
+		</div>
+		<!--// inner -->
+		<!-- gnb -->
+		<div id="gnb">
+			<a href="">aaa</a>
+		</div>
+		<!--// gnb -->
+	</div>
+	<!--// header -->
+
+	<!-- container -->
+	<div id="container" style="display:inline-block">
+		<!-- contents -->
+		<div class="contents">
+			<script>
+			$(function(){
+				$("title").text("컨텐츠 제목 < (이하생략···) 2depth 제목 < 1depth 제목 < 홈페이지명");
+			})
+			</script>
+		</div>
+		<!--// contents -->
+	</div>
+	<!--// container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<!-- inner -->
+		<div class="inner">
+		
+		</div>
+		<!--// inner -->
+	</div>
+	<!--// footer -->
+</div>
+<!--// wrap -->
+<script>
+$(function(){
+	var skipNav = $("#skipNav a");
+	skipNav.click(function(e){
+		e.preventDefault();
+		var val = $(this).attr("href");
+		$("#"+val).focus();
+	});
+})
+</script>
+
+
+
+
+
+
+<script>
+$(function(){
+	var depth01 = $(".location > li").eq(1).find("> a").text(),
+		depth02 = $(".location > li").eq(2).find("> a").text(),
+		depth03 = $(".location > li").eq(3).find("> a").text();
+		if(depth01.length){
+			if(depth02.length){ 
+				if(depth03.length){
+					$("title").text(depth03 + " < " + depth02 + " < " + depth01 + " < 홈페이지 로고 24");
+				}else{
+					$("title").text(depth02 + " < " + depth01 + " < 홈페이지 로고 24");
+				}
+			}else{
+				$("title").text(depth01 + " < 홈페이지 로고 24");
+			}
+		}else{
+			$("title").text("홈페이지 로고 24");
+		}
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
