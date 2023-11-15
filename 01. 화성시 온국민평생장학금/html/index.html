@@ -32,14 +32,72 @@
 	<div id="header">
 		<!-- inner -->
 		<div class="inner">
-			
+			<h1><a href="">화성시 온국민평생장학금</a></h1>
+			<button type="button" class="btnMenu">메뉴열기</button>
 		</div>
 		<!--// inner -->
-		<!-- gnb -->
-		<div id="gnb">
-			<a href="">aaa</a>
+		<!-- gnbWrap -->
+		<div class="gnbWrap">
+			<!-- inner -->
+			<div class="inner">
+				<!-- searchArea -->
+				<div class="searchArea">
+					<input type="text" title="검색어" placeholder="검색어를 입력하세요.">
+					<button type="button" class="btnSearch">검색</button>
+				</div>
+				<!--// searchArea -->
+				<!-- gnb -->
+				<ul id="gnb">
+					<li>
+						<a href="">온국민평생장학금 소개</a>
+						<ul>
+							<li><strong>온국민평생장학금 소개</strong></li>
+							<li><a href="">온국민평생장학금 소개</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">온국민평생장학금 사용안내</a>
+						<ul>
+							<li><strong>온국민평생장학금 사용안내</strong></li>
+							<li><a href="">온국민평생장학금 사용방법</a></li>
+							<li><a href="">교육가맹점리스트</a></li>
+							<li><a href="">각 교육기관 기본정보 및 강좌 정보</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">교육가맹점 신청</a>
+						<ul>
+							<li><strong>교육가맹점 신청</strong></li>
+							<li><a href="">등록안내</a></li>
+							<li><a href="">교육 가맹점 신청 동의</a></li>
+							<li><a href="">교육 가맹점 신청서 작성</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="">열린마당</a>
+						<ul>
+							<li><strong>열린마당</strong></li>
+							<li><a href="">공지사항</a></li>
+							<li><a href="">홍보동영상</a></li>
+							<li><a href="">교육가맹점 개설과정 홍보</a></li>
+							<li><a href="">FAQ</a></li>
+							<li><a href="">Q&amp;A</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!--// gnb -->
+				<!-- utilArea -->
+				<div class="utilArea">
+					<ul>
+						<li class="signIn"><a href="">로그인</a></li>
+						<li class="signUp"><a href="">회원가입</a></li>
+					</ul>
+				</div>
+				<!--// utilArea -->
+			</div>
+			<!--// inner -->
 		</div>
-		<!--// gnb -->
+		<!--// gnbWrap -->
 	</div>
 	<!--// header -->
 
@@ -47,11 +105,7 @@
 	<div id="container">
 		<!-- contents -->
 		<div class="contents">
-			<script>
-			$(function(){
-				$("title").text("컨텐츠 제목 < (이하생략···) 2depth 제목 < 1depth 제목 < 홈페이지명");
-			})
-			</script>
+			
 		</div>
 		<!--// contents -->
 	</div>
@@ -68,52 +122,5 @@
 	<!--// footer -->
 </div>
 <!--// wrap -->
-<script>
-$(function(){
-	var skipNav = $("#skipNav a");
-	skipNav.click(function(e){
-		e.preventDefault();
-		var val = $(this).attr("href");
-		$("#"+val).focus();
-	});
-})
-</script>
-
-
-
-
-
-
-<script>
-$(function(){
-	var depth01 = $(".location > li").eq(1).find("> a").text(),
-		depth02 = $(".location > li").eq(2).find("> a").text(),
-		depth03 = $(".location > li").eq(3).find("> a").text();
-		if(depth01.length){
-			if(depth02.length){ 
-				if(depth03.length){
-					$("title").text(depth03 + " < " + depth02 + " < " + depth01 + " < 홈페이지 로고 24");
-				}else{
-					$("title").text(depth02 + " < " + depth01 + " < 홈페이지 로고 24");
-				}
-			}else{
-				$("title").text(depth01 + " < 홈페이지 로고 24");
-			}
-		}else{
-			$("title").text("홈페이지 로고 24");
-		}
-})
-</script>
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

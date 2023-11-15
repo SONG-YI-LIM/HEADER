@@ -43,6 +43,7 @@ a {text-decoration:none; cursor:pointer}
 body {position:relative}
 em {font-style:normal}
 a, button {cursor:pointer}
+button {border:0}
 legend, hr, caption {position:absolute; top:-9990px; left:-9999px; width:1px; height:1px; opacity:0}
 
 /* skip nav */
