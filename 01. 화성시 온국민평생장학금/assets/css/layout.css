@@ -7,33 +7,53 @@
 #header > .inner .btnMenu {display:none; width:30px; height:30px; text-indent:-9999px; background:url("../images/btn-menu.png") no-repeat center/100% auto}
 
 .gnbWrap {position:absolute; top:100px; left:0; border-top:2px solid #21b8ce; border-bottom:1px solid #ccc; width:100%; background-color:#fff}
+.gnbWrap:before {content:""; position:absolute; top:72px; left:0; width:100%; height:1px; background-color:#ddd}
 .gnbWrap .inner {display:flex; align-items:center; justify-content:space-between; position:relative; margin:0 auto; padding:0 20px; width:1240px; max-width:100%}
 .gnbWrap .inner .searchArea {position:absolute; top:-73px; right:20px; width:373px}
 .gnbWrap .inner .searchArea input {padding:0 52px 0 20px; border:1px solid #ccc; border-radius:999px; width:100%; line-height:40px; font-size:15px; color:#666}
-.gnbWrap .inner .searchArea .btnSearch {position:absolute; top:0; right:0; width:52px; height:100%; text-indent:-9999px; background:url("../images/btn-search.png") no-repeat center right 16px/20px auto}
+.gnbWrap .inner .searchArea .btnSearch {position:absolute; top:0; right:0; width:52px; height:42px; text-indent:-9999px; background:url("../images/btn-search.png") no-repeat center right 16px/20px auto}
 
+.gnbWrap .inner .utilArea {position:absolute; top:21px; right:20px}
 .gnbWrap .inner .utilArea ul {display:flex; gap:20px}
 .gnbWrap .inner .utilArea ul li a {display:block; padding-left:24px; line-height:30px; font-size:15px; color:#000}
 .gnbWrap .inner .utilArea ul li.signIn a {background:url("../images/ico-0101.png") no-repeat center left/18px auto}
 .gnbWrap .inner .utilArea ul li.signUp a {background:url("../images/ico-0102.png") no-repeat center left/18px auto}
 
 @media (max-width: 1160px) {
+    #header > .inner {border-bottom:2px solid #21b8ce; height:72px}
+    #header > .inner h1 {width:150px; height:40px}
     #header .inner .btnMenu {display:block}
+
+    .gnbWrap {display:block; position:fixed; top:72px; right:0; left:inherit; overflow-y:auto; border:0}
+    .gnbWrap.open {right:0}
+    .gnbWrap:before {display:none}
+    .gnbWrap .inner {flex-direction:column; padding-top:20px}
+    .gnbWrap .inner .searchArea {position:relative; top:inherit; right:inherit; padding-bottom:50px; width:100%}
+    .gnbWrap .inner .utilArea {top:82px}
 }
 @media (max-width: 767px) {
 
 }
 
 /* GNB */
-#gnb {display:flex; gap:80px; height:268px}
-#gnb > li > a {display:block; line-height:72px; font-size:22px; font-weight:700; color:#000}
-#gnb ul {display:block; position:absolute; top:75px; padding-top:20px}
+#gnb {display:flex; gap:80px; transition:all 0.2s; -moz-transition:all 0.2s; -webkit-transition:all 0.2s; -o-transition:all 0.2s} /* 268px */
+#gnb > li > a {display:block; position:relative; line-height:72px; font-size:22px; font-weight:700; color:#000}
+#gnb ul {display:none; position:absolute; top:75px; padding-top:20px}
 #gnb ul li a {display:block; position:relative; padding-left:20px; line-height:32px; font-size:16px; color:#000}
 #gnb ul li a:before {content:""; position:absolute; top:calc(50% - 2px); left:8px; border-radius:50%; width:3px; height:3px; background-color:#000}
 @media (min-width: 1161px) {
-    #gnb ul strong {display:none}
+    #gnb {height:72px}
+    #gnb:hover {height:268px}
+    #gnb:hover ul {display:block}
+    #gnb > li:hover > a {color:#21b8ce}
+    #gnb > li:hover > a:before {content:""; position:absolute; bottom:-1px; left:0; width:100%; height:4px; background-color:#21b8ce}
+    #gnb ul li a:hover {color:#21b8ce}
+    #gnb ul li a:hover:before {background-color:#21b8ce}
 }
 @media (max-width: 1160px) {
+    #gnb {flex-direction:column; gap:0; border-top:2px solid #000; padding-top:16px; width:100%}
+    #gnb > li > a {padding:0 20px; border-radius:10px; line-height:50px; font-size:20px; color:#fff; background-color:#007080}
+    #gnb ul {display:block; position:relative; top:inherit; padding:12px 0 20px}
 
 }
 @media (max-width: 767px) {
