@@ -5,6 +5,7 @@
 #header > .inner h1 {width:190px; height:50px}
 #header > .inner h1 a {display:block; width:100%; height:100%; text-indent:-9999px; background:url("../images/logo.png") no-repeat center/100% auto}
 #header > .inner .btnMenu {display:none; width:30px; height:30px; text-indent:-9999px; background:url("../images/btn-menu.png") no-repeat center/100% auto}
+#header > .inner .btnMenu.close {background-image:url("../images/btn-close.png")}
 
 .gnbWrap {position:absolute; top:100px; left:0; border-top:2px solid #21b8ce; border-bottom:1px solid #ccc; width:100%; background-color:#fff}
 .gnbWrap:before {content:""; position:absolute; top:72px; left:0; width:100%; height:1px; background-color:#ddd}
@@ -24,25 +25,27 @@
     #header > .inner h1 {width:150px; height:40px}
     #header .inner .btnMenu {display:block}
 
-    .gnbWrap {display:block; position:fixed; top:72px; right:0; left:inherit; overflow-y:auto; border:0}
+    .gnbWrap {display:block; position:fixed; top:72px; right:-100%; left:inherit; overflow-y:auto; border:0; height:100%; transition:right 0.2s; -moz-transition:right 0.2s; -webkit-transition:right 0.2s; -o-transition:right 0.2s}
     .gnbWrap.open {right:0}
     .gnbWrap:before {display:none}
-    .gnbWrap .inner {flex-direction:column; padding-top:20px}
+    .gnbWrap .inner {flex-direction:column; padding:20px 20px 388px}
     .gnbWrap .inner .searchArea {position:relative; top:inherit; right:inherit; padding-bottom:50px; width:100%}
     .gnbWrap .inner .utilArea {top:82px}
 }
 @media (max-width: 767px) {
-
+    .gnbWrap .inner {padding-bottom:412px}
 }
 
 /* GNB */
-#gnb {display:flex; gap:80px; transition:all 0.2s; -moz-transition:all 0.2s; -webkit-transition:all 0.2s; -o-transition:all 0.2s} /* 268px */
+#gnb {display:flex; gap:80px; transition:all 0.2s; -moz-transition:all 0.2s; -webkit-transition:all 0.2s; -o-transition:all 0.2s}
 #gnb > li > a {display:block; position:relative; line-height:72px; font-size:22px; font-weight:700; color:#000}
 #gnb ul {display:none; position:absolute; top:75px; padding-top:20px}
 #gnb ul li a {display:block; position:relative; padding-left:20px; line-height:32px; font-size:16px; color:#000}
 #gnb ul li a:before {content:""; position:absolute; top:calc(50% - 2px); left:8px; border-radius:50%; width:3px; height:3px; background-color:#000}
 @media (min-width: 1161px) {
     #gnb {height:72px}
+    #gnb.open {height:268px}
+    #gnb.open ul {display:block}
     #gnb:hover {height:268px}
     #gnb:hover ul {display:block}
     #gnb > li:hover > a {color:#21b8ce}
@@ -64,15 +67,10 @@
 
 
 /* FOOTER */
-
-
-
-@media (min-width: 1161px) {
-
-}
+#footer {position:relative; z-index:1000; height:205px; background-color:#f3f3f3}
 @media (max-width: 1160px) {
-
+    #footer {height:316px}
 }
 @media (max-width: 767px) {
-
+    #footer {height:340px}
 }
