@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* HEADER */
-#header {position:relative}
+#header {position:relative; border-bottom:1px solid #dbdbdb}
 #header .bgGray {background-color:#F7F7FA}
 #header .inner {display:flex; align-items:center; justify-content:space-between; margin:0 auto; padding:0 20px; width:1320px; max-width:100%; height:60px}
 #header .inner h1 {width:254px; height:28px}
@@ -9,7 +9,6 @@
 #header .inner .btnMenu {display:none; width:20px; height:20px; text-indent:-9999px; background:url("../images/btn-menu.svg") no-repeat center}
 
 .gnbWrap .gnbInner {position:relative; margin:0 auto; padding:0 20px; width:1320px; max-width:100%}
-
 .utilArea {display:flex; gap:14px; position:absolute; top:-42px; right:20px}
 .utilArea p {line-height:24px; font-size:12px; color:#767676}
 .utilArea ul {display:flex; gap:6px}
@@ -17,15 +16,41 @@
 .utilArea ul li a.btn0101 {background:url("../images/btn-0101.png") no-repeat center}
 .utilArea ul li a.btn0102 {background:url("../images/btn-0102.png") no-repeat center}
 .utilArea ul li a.btn0103 {background:url("../images/btn-0103.png") no-repeat center}
-
-.searchArea {position:absolute; top:0; right:0}
+.searchArea {position:absolute; top:17px; right:58px}
 .searchArea input {border:1px solid #dbdbdb; border-radius:999px; padding:0 52px 0 16px; line-height:38px; font-size:12px; color:#767676}
-.searchArea .btnSearch {position:absolute; top:0; right:0; width:52px; text-indent:-9999px; background:url("../images/btn-search.png") no-repeat center/16px auto}
+.searchArea .btnSearch {position:absolute; top:0; right:0; width:52px; height:100%; text-indent:-9999px; background:url("../images/btn-search.png") no-repeat center/16px auto}
+.btnSiteMap {position:absolute; top:21px; right:20px; width:32px; height:32px; text-indent:-9999px; background:url("../images/btn-menu.svg") no-repeat center right/20px auto }
 
 /* GNB */
-#gnb {display:flex; justify-content:space-between; padding-right:200px}
+#gnb {display:flex; justify-content:space-between; padding-right:294px}
+#gnb > li {position:relative}
+#gnb > li:before {content:""; position:absolute; bottom:0; left:0; width:100%; height:4px; background-color:#0D54E4; opacity:0; transition:all 0.2s ease; -moz-transition:all 0.2s ease; -webkit-transition:all 0.2s ease; -o-transition:all 0.2s ease}
 #gnb > li > a {line-height:74px; font-size:17px; font-weight:500; color:#000}
+#gnb ul {display:none; position:absolute; top:100%; left:50%; padding:20px 40px; border:1px solid #dbdbdb; background-color:#fff; transform:translateX(-50%); -ms-transform:translateX(-50%); -moz-transform:translateX(-50%); -webkit-transform:translateX(-50%)}
+#gnb ul li {margin:10px 0; text-align:center}
+#gnb ul li a {display:inline-block; position:relative; white-space:nowrap; line-height:22px; font-size:15px; color:#505050}
+#gnb ul li a:before {content:""; position:absolute; bottom:2px; left:0; width:100%; height:1px; background-color:#505050; opacity:0; transition:all 0.2s ease; -moz-transition:all 0.2s ease; -webkit-transition:all 0.2s ease; -o-transition:all 0.2s ease}
+#gnb ul li a[target=_blank] {padding-right:30px; background:url("../images/ico-link.png") no-repeat center right/16px auto}
 
+
+#gnb > li:hover:before {opacity:1}
+#gnb > li:hover > a {font-weight:700}
+#gnb > li:hover ul {display:block}
+#gnb ul li a:hover:before {opacity:1}
+
+.siteMap {display:none; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; background-color:#F7F7FA}
+.siteMap .in {margin:0 auto; padding:0 20px; width:1320px; max-width:100%}
+.siteMap .in > ul {display:flex}
+.siteMap .in > ul > li {flex:1; padding:20px 0; border-left:1px solid #dbdbdb; text-align:center}
+.siteMap .in > ul > li:last-child {border-right:1px solid #dbdbdb}
+.siteMap .in > ul > li > a {display:inline-block; margin-bottom:10px; line-height:30px; font-size:17px; font-weight:500; color:#000}
+.siteMap .in ul ul li {margin:10px 0}
+.siteMap .in ul ul li a {display:inline-block; position:relative; line-height:28px; font-size:15px; color:#505050}
+.siteMap .in ul ul li a:before {content:""; position:absolute; bottom:2px; left:0; width:100%; height:1px; background-color:#505050; opacity:0; transition:all 0.2s ease; -moz-transition:all 0.2s ease; -webkit-transition:all 0.2s ease; -o-transition:all 0.2s ease}
+.siteMap .in ul ul li a[target=_blank] {padding-right:30px; background:url("../images/ico-link.png") no-repeat center right/16px auto}
+
+.siteMap .in > ul > li:hover {background-color:#fff}
+.siteMap .in ul ul li a:hover:before {opacity:1}
 
 /* CONTAINER */
 

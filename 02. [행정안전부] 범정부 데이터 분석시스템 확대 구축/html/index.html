@@ -95,8 +95,8 @@
 					<li>
 						<a href="">공동활용데이터</a>
 						<ul>
-							<li><a href="">데이터 찾기</a></li>
-							<li><a href="">데이터 등록</a></li>
+							<li><a href="" target="_blank" title="새창으로 열기">데이터 찾기</a></li>
+							<li><a href="" target="_blank" title="새창으로 열기">데이터 등록</a></li>
 						</ul>
 					</li>
 					<li>
@@ -119,6 +119,68 @@
 				<button type="button" class="btnSiteMap">사이트맵 보기</button>
 			</div>
 			<!--// gnbInner -->
+			<!-- siteMap -->
+			<div class="siteMap">
+				<!-- in -->
+				<div class="in">
+					<ul>
+						<li>
+							<a href="">시스템 소개</a>
+						</li>
+						<li>
+							<a href="">데이터 분석</a>
+							<ul>
+								<li><a href="">소셜 분석</a></li>
+								<li><a href="">온라인 분석</a></li>
+								<li><a href="">표준분석모델</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">분석 인프라</a>
+							<ul>
+								<li><a href="">분석자원 신청</a></li>
+								<li><a href="">분석중인 과제</a></li>
+								<li><a href="">분석인프라 사용 현황</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">분석 자원</a>
+							<ul>
+								<li><a href="">분석의뢰</a></li>
+								<li><a href="">주소좌표 변환</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">분석 사례</a>
+							<ul>
+								<li><a href="">분석 우수사례</a></li>
+								<li><a href="">기관 분석사례</a></li>
+								<li><a href="">협업 분석사례</a></li>
+								<li><a href="">분석사례 등록</a></li>
+								<li><a href="">카달로그맵</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">공동활용데이터</a>
+							<ul>
+								<li><a href="" target="_blank" title="새창으로 열기">데이터 찾기</a></li>
+								<li><a href="" target="_blank" title="새창으로 열기">데이터 등록</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">소통 공간</a>
+							<ul>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">묻고 답하기</a></li>
+								<li><a href="">자료실</a></li>
+								<li><a href="">이벤트존</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!--// in -->
+			</div>
+			<!--// siteMap -->
 		</div>
 		<!--// gnbWrap -->
 	</div>
@@ -145,45 +207,5 @@
 	<!--// footer -->
 </div>
 <!--// wrap -->
-<script>
-// 레이아웃
-function fn_layout(){
-	const HEADER = $('#header');
-	const CONTAINER = $('#container');
-	const FOOTER = $('#footer');
-	const BTNMENU = $('.btnMenu');
-	const GNBWRAP = $('.gnbWrap');
-	const GNB = $('#gnb');
-	
-	// CONTAINER HEIGHT
-	$(window).resize(function(){
-		CONTAINER.css({'min-height':$(window).height() - HEADER.outerHeight() - FOOTER.outerHeight()});
-	}).resize();
-
-	// GNB OPEN/CLOSE
-	BTNMENU.on('click', function(){
-		let isOpen = $(this).hasClass('close');
-		if(isOpen){
-			GNBWRAP.removeClass('open');
-			$(this).removeClass('close').text('메뉴열기');
-		}else{
-			GNBWRAP.addClass('open');
-			$(this).addClass('close').text('메뉴닫기');
-		}
-	});
-
-	// GNB FOCUS
-	GNB.on('focusin', '> li > a', function(){
-		GNB.addClass('open');
-	});
-	GNB.on('focusout', 'ul li:last-child a', function(){
-		GNB.removeClass('open');
-	});
-}
-
-$(function(){
-	fn_layout();
-});
-</script>
 </body>
 </html>
