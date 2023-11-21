@@ -33,7 +33,7 @@ function fn_layout(){
 	});
 }
 
-(function() {
+$(function() {
 	// skipNav
 	$("a[href^='#']").click(function(evt){
 	  var anchortarget = $(this).attr("href");
