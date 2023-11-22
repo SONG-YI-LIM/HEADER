@@ -6,6 +6,7 @@ function fn_layout() {
 	const BTNSITEMAP = $(".btnSiteMap");
 	const SITEMAP = $('.siteMap');
 	const BTNMENU = $('.btnMenu');
+	const BTNCLOSE = $('.btnClose');
 	const GNBWRAP = $('.gnbWrap');
 
 	// CONTAINER HEIGHT
@@ -47,13 +48,15 @@ function fn_layout() {
 
 	// 모바일 GNB
 	BTNMENU.on('click', function(){
-		if($(this).hasClass('close')){
-			$(this).removeClass('close').text('메뉴열기');
-			GNBWRAP.removeClass('open');
-		}else{
-			$(this).addClass('close').text('메뉴닫기');
-			GNBWRAP.addClass('open');
-		}
+		GNBWRAP.addClass('open');
+		GNBWRAP.find('.gnbInner').append(`
+			<button type="button" class="btnClose">메뉴닫기</button>
+		`)
+	});
+
+	GNBWRAP.on('click', '.btnClose', function(){
+		GNBWRAP.removeClass('open');
+		$(this).remove();
 	});
 
 	GNB.on('click', '> li.more > a', function(e){
