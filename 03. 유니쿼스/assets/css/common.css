@@ -1,0 +1,53 @@
+@charset "utf-8"; 
+@font-face {
+	font-family:'Noto Sans KR'; 
+	font-style:normal; 
+	font-weight:300; 
+	src:url("../fonts/NotoSansKR-Light.woff2") format('woff2'),
+		url("../fonts/NotoSansKR-Light.woff") format('woff'),
+		url("../fonts/NotoSansKR-Light.otf") format('opentype'); 
+}
+@font-face {
+	font-family:'Noto Sans KR'; 
+	font-style:normal; 
+	font-weight:400; 
+	src:url("../fonts/NotoSansKR-Regular.woff2") format('woff2'),
+		url("../fonts/NotoSansKR-Regular.woff") format('woff'),
+		url("../fonts/NotoSansKR-Regular.otf") format('opentype'); 
+}
+@font-face {
+	font-family:'Noto Sans KR'; 
+	font-style:normal; 
+	font-weight:500; 
+	src:url("../fonts/NotoSansKR-Medium.woff2") format('woff2'),
+		url("../fonts/NotoSansKR-Medium.woff") format('woff'),
+		url("../fonts/NotoSansKR-Medium.otf") format('opentype'); 
+}
+@font-face {
+	font-family:'Noto Sans KR'; 
+	font-style:normal; 
+	font-weight:700; 
+	src:url("../fonts/NotoSansKR-Bold.woff2") format('woff2'),
+		url("../fonts/NotoSansKR-Bold.woff") format('woff'),
+		url("../fonts/NotoSansKR-Bold.otf") format('opentype'); 
+}
+* {margin:0; padding:0; box-sizing:border-box}
+body {overflow-y:auto; position:relative; letter-spacing:-0.05em; font-size:14px; font-family:"Noto Sans KR" , sans-serif; color:#333}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, address {margin:0; padding:0}
+pre {margin:0; padding:0; word-wrap:break-word; white-space:pre-line}
+table {border:0; border-collapse:collapse; border-spacing:0; width:100%}
+fieldset, img {border:0;vertical-align:top}
+ul, li {list-style:none}
+h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal; line-height:1em}
+a {text-decoration:none; cursor:pointer}
+body {position:relative}
+em {font-style:normal}
+a, button {cursor:pointer}
+button {border:0}
+legend, hr, caption {position:absolute; top:-9990px; left:-9999px; width:1px; height:1px; opacity:0}
+
+/* skip nav */
+#skipNav {height:0}
+#skipNav dt {overflow:hidden; position:absolute !important; width:1px; height:1px}
+#skipNav dd a {overflow:hidden; display:block; position:absolute; top:-10000px; left:0; z-index:999999; width:100%; font-size:16px; text-align:center}
+#skipNav dd a.on {overflow:hidden; position:absolute; top:0; left:0; padding:15px 0; background:#272727; font-weight:bold; color:#fff}

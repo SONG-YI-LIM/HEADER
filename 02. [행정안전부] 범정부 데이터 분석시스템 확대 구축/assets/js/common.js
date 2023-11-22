@@ -71,26 +71,6 @@ function fn_layout() {
 			$(this).siblings().slideDown(200);
 		}
 	});
-
-	
-
-	// GNB.on('focusout', '> li > a', function(){
-	// 	console.log("aaa");
-	// 	$(this).parent().addClass('focus');
-	// });
-
-	// GNB.on('focusout', 'ul li:last-child > a', function(){
-	// 	$(this).parents('li').removeClass('focus');
-	// });
-
-	
-
-
-	
-	// GNB.on('focusout', '> li > a', function(){
-	// 	console.log("focus out");
-	// 	$(this).parent().removeClass('focus');
-	// });
 }
 
 $(function() {
