@@ -12,6 +12,7 @@
 #header.open:before {background-color:#ccc; opacity:1}
 #header.open .inner h1 a {background-image:url("../images/logo-on.png")}
 #header.open .inner .btnAllMenu {background-image:url("../images/btn-menu-on.png")}
+#header.open .inner .btnAllMenu.close {background-image:url("../images/btn-close.png")}
 
 @media (max-width: 1160px){
     
@@ -21,7 +22,7 @@
 }
 
 /* GNB */
-.gnbWrap {position:absolute; top:0; left:0; width:100%}
+.gnbWrap {position:absolute; top:0; left:0; width:100%; height:100px; transition:all 0.2s; -moz-transition:all 0.2s; -wbkit-transition:all 0.2s; -o-transition:all 0.2s}
 .gnbWrap .gnbInner {margin:0 auto; padding:0 180px; width:1800px; max-width:100%}
 
 #gnb {display:flex; position:relative; z-index:1000}
@@ -32,16 +33,20 @@
 #gnb ul li {position:relative; padding-left:10px; text-align:left}
 #gnb ul li:before {content:""; position:absolute; top:17px; left:0; border-radius:50%; width:2px; height:2px; background-color:#333}
 #gnb ul li a {display:block; padding:6px 0; word-break:keep-all; line-height:24px; font-size:16px; font-weight:500; color:#333}
-#gnb > li:hover > a:before {opacity:1}
-#gnb ul li:hover:before {background-color:#e91c24}
-#gnb ul li a:hover {color:#e91c24}
+#gnb > li:hover > a:before,
+#gnb > li.focus > a:before {opacity:1}
+#gnb ul li:hover:before,
+#gnb ul li.focus:before {background-color:#e91c24}
+#gnb ul li a:hover,
+#gnb ul li a:focus {color:#e91c24}
 
 .open .gnbWrap {height:290px}
 .open .gnbWrap:before {content:""; position:absolute; top:0; left:0; width:100%; height:100%; background-color:#fff}
 .open #gnb > li > a {color:#000}
 @media (min-width: 1161px) {
+    .open #gnb ul {display:block}
     #gnb {height:100px}
-    #gnb > li:hover ul {display:block}
+    /* #gnb:hover ul {display:block} */
 }
 
 /* CONTAINER */
