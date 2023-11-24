@@ -19,6 +19,13 @@ function fn_layout() {
 		HEADER.removeClass('open');
 	});
 
+	$(window).resize(function(){
+		if($(window).width() < 1161){
+			GNB.off();
+			GNBWRAP.off();
+		}
+	}).resize();
+
 	BTNAll.on('click', function(){
 		if($(this).hasClass('close')){
 			$(this).removeClass('close').text('전체메뉴 보기');
