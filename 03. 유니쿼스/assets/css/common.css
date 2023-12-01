@@ -40,7 +40,7 @@ fieldset, img {border:0;vertical-align:top}
 ul, li {list-style:none}
 h1, h2, h3, h4, h5, h6 {font-size:100%; font-weight:normal; line-height:1em}
 a {text-decoration:none; cursor:pointer}
-body {position:relative}
+body {position:relative; overflow-y:hidden}
 em {font-style:normal}
 a, button {cursor:pointer}
 button {border:0}
