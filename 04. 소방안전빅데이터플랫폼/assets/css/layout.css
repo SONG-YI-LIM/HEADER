@@ -4,8 +4,17 @@
 .headerTop {margin:0 auto; padding:0 20px; border-radius:999px; width:1240px; max-width:100%; background-color:#f0f0f0}
 .headerTop .inner {display:flex; justify-content:space-between; padding:5px 4px}
 .headerTop .inner * {display:flex}
+.headerTop .inner .left,
+.headerTop .inner .left ul {gap:14px}
+.headerTop .inner .right ul {gap:20px}
 .left .btnChat {padding:0 16px 0 34px; border:1px solid #c7c7c7; border-radius:999px; line-height:24px; font-size:14px; color:#d92017; background:#fff url("../images/ico-0101.png") no-repeat center left 3px/24px auto}
-.left ul li a {line-height:20px; font-size:14px; color:#555}
+.left ul li a {padding-left:24px; line-height:26px; font-size:14px; color:#555}
+.left ul li a.btnFAQ {background:url("../images/ico-0102.png") no-repeat center left/20px auto}
+.left ul li a.btnQnA {background:url("../images/ico-0103.png") no-repeat center left/20px auto}
+.left ul li a.btnEdu {background:url("../images/ico-0104.png") no-repeat center left/20px auto}
+.right ul li a {padding-left:20px; line-height:26px; font-size:14px; color:#555}
+.right ul li a.btnSignIn {background:url("../images/ico-0105.png") no-repeat center left/14px auto}
+.right ul li a.btnSignUp {background:url("../images/ico-0106.png") no-repeat center left/14px auto}
 
 
 /* GNB */
