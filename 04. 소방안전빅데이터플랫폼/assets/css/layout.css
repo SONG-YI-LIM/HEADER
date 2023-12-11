@@ -1,8 +1,8 @@
 @charset "utf-8";
 
 /* HEADER */
-.headerTop {margin:20px auto; padding:0 20px; border-radius:999px; width:1240px; max-width:100%; background-color:#f0f0f0}
-.headerTop .inner {display:flex; justify-content:space-between; padding:5px 4px}
+.headerTop {margin:20px auto; padding:0 20px; width:1240px; max-width:100%}
+.headerTop .inner {display:flex; justify-content:space-between; padding:5px 24px; border-radius:999px; background-color:#f0f0f0}
 .headerTop .inner * {display:flex}
 .headerTop .inner .left,
 .headerTop .inner .left ul {gap:14px}
@@ -16,11 +16,13 @@
 .right ul li a.btnSignIn {background:url("../images/ico-0105.png") no-repeat center left/14px auto}
 .right ul li a.btnSignUp {background:url("../images/ico-0106.png") no-repeat center left/14px auto}
 
+.hInner {display:flex; justify-content:space-between; margin:0 auto; padding:0 20px; width:1240px; max-width:100%}
 .hInner h1 {width:328px; height:50px}
 .hInner h1 a {display:block; height:100%; text-indent:-9999px; background:url("../images/logo.png") no-repeat center/100% auto}
-
+.hInner .btnMenu {display:block; width:26px; text-indent:-9999px; background:url("../images/btn-menu.png") no-repeat center/100% auto}
 
 /* GNB */
+#gnb > ul {display:flex}
 
 
 /* CONTAINER */
