@@ -1,12 +1,13 @@
 @charset "utf-8";
 
 /* HEADER */
-.headerTop {margin:20px auto; padding:0 20px; width:1240px; max-width:100%}
-.headerTop .inner {display:flex; justify-content:space-between; padding:5px 24px; border-radius:999px; background-color:#f0f0f0}
-.headerTop .inner * {display:flex}
-.headerTop .inner .left,
-.headerTop .inner .left ul {gap:14px}
-.headerTop .inner .right ul {gap:20px}
+#header {position:relative}
+.headerTop {margin:20px auto 0; padding:0 20px; width:1240px; max-width:100%}
+.headerTop .topInner {display:flex; justify-content:space-between; padding:5px 24px; border-radius:999px; background-color:#f0f0f0}
+.headerTop .topInner * {display:flex}
+.headerTop .topInner .left,
+.headerTop .topInner .left ul {gap:14px}
+.headerTop .topInner .right ul {gap:20px}
 .left .btnChat {padding:0 16px 0 34px; border:1px solid #c7c7c7; border-radius:999px; line-height:24px; font-size:14px; font-weight:500; color:#b31722; background:#fff url("../images/ico-0101.png") no-repeat center left 3px/24px auto}
 .left ul li a {padding-left:24px; line-height:26px; font-size:14px; font-weight:500; color:#555}
 .left ul li a.btnFAQ {background:url("../images/ico-0102.png") no-repeat center left/20px auto}
@@ -16,13 +17,32 @@
 .right ul li a.btnSignIn {background:url("../images/ico-0105.png") no-repeat center left/14px auto}
 .right ul li a.btnSignUp {background:url("../images/ico-0106.png") no-repeat center left/14px auto}
 
-.hInner {display:flex; justify-content:space-between; margin:0 auto; padding:0 20px; width:1240px; max-width:100%}
-.hInner h1 {width:328px; height:50px}
-.hInner h1 a {display:block; height:100%; text-indent:-9999px; background:url("../images/logo.png") no-repeat center/100% auto}
-.hInner .btnMenu {display:block; width:26px; text-indent:-9999px; background:url("../images/btn-menu.png") no-repeat center/100% auto}
+.inner {display:flex; align-items:center; justify-content:space-between; margin:0 auto; padding:0 20px; width:1240px; max-width:100%}
+.inner h1 {width:328px; height:50px}
+.inner h1 a {display:block; height:100%; text-indent:-9999px; background:url("../images/logo.png") no-repeat center/100% auto}
+.inner .btnMenu {width:26px}
+.inner .btnMenu button {display:block; width:100%; height:100%; text-indent:-9999px; background:url("../images/btn-menu.png") no-repeat center/100% auto}
 
 /* GNB */
-#gnb > ul {display:flex}
+#gnb {display:flex; justify-content:space-between; width:calc(100% - 370px)}
+#gnb > li > a {display:block; line-height:94px; font-size:20px; font-weight:700; color:#000}
+
+
+@media (min-width: 1161px) {
+    #gnb div {display:none; position:absolute; top:130px; left:0; border-top:1px solid #ccc; border-bottom:2px solid #b0b0b0; width:100%; box-shadow:0 4px 8px rgba(0,0,0,0.2)}
+    #gnb dl {display:flex; margin:0 auto; padding:0 20px; width:1240px; max-width:100%}
+    #gnb dl dt {position:relative; padding:42px 40px; width:330px; background-color:#f6f6f6}
+    #gnb dl dt:before {content:""; position:absolute; top:42px; left:100%; width:0; height:0; border-top:19px solid transparent; border-right:20px solid transparent; border-bottom:19px solid transparent; border-left:20px solid #f6f6f6}
+    #gnb dl dt p {position:relative; padding-left:72px; line-height:1.6; font-size:26px; font-weight:300; color:#666}
+    #gnb dl dt p:before {content:""; position:absolute; top:0; left:0; width:48px; height:60px; background:url("../images/ico-docu.png") no-repeat center left/100% auto}
+    #gnb dl dd {width:calc(100% - 330px)}
+    #gnb dl ul {display:flex; flex-wrap:wrap}
+    #gnb dl ul li {min-width:25%}
+    #gnb dl ul li a {display:block; font-size:16px; color:#000}
+
+    #gnb > li:hover div {display:block}
+}
+
 
 
 /* CONTAINER */
